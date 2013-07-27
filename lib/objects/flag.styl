@@ -1,0 +1,37 @@
+/**
+ * Flag object | By Harry Roberts http://bit.ly/18uCKQM
+ *
+ * E.g.:
+ *
+ *    <div class="flag flag--bottom">
+ *        <img src="" alt="" class="flag__img">
+ *        <p class="flag__body">Lorem ipsum dolor sit amet</p>
+ *    </div>
+ */
+
+.flag {
+  display: table;
+  width: 100%;
+
+  &__image,
+  &__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .flag--top & {
+      vertical-align: top;
+    }
+
+    .flag--bottom & {
+      vertical-align: bottom;
+    }
+  }
+
+  &__image > img {
+    display: block;
+  }
+
+  &__body {
+    width: 100%;
+  }
+}

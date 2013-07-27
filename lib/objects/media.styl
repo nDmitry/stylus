@@ -1,0 +1,31 @@
+/**
+ * Media object | By Nicole Sullivan http://bit.ly/19VNkBF
+ *
+ * E.g.:
+ *
+ *    <div class="media">
+ *        <img src="" alt="" class="media__img">
+ *        <p class="media__body">Lorem ipsum dolor sit amet</p>
+ *    </div>
+ */
+
+.media {
+  display: block;
+
+  &__img {
+    float: left;
+  }
+
+  &__img--rev {
+    float: right;
+  }
+
+  &__img img,
+  &__img--rev img {
+    display: block;
+  }
+
+  &__body {
+    overflow: hidden;
+  }
+}

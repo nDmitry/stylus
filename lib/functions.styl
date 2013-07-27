@@ -1,0 +1,35 @@
+/**
+ * Selector helper for emit headings
+ *
+ * {headings()} {}
+ * -> h1, h2, h3, h4, h5, h6 {}
+ * {headings(2)} {}
+ * -> h1, h2 {}
+ * {headings(2,5)} {}
+ * -> h2, h3, h4, h5 {}
+ */
+
+headings(from = false, to = false) {
+
+ if from == false {
+   from = 1;
+ }
+
+ if to == false {
+   to = 6;
+ }
+
+ result = '';
+
+ for i in (from..to) {
+   concat = 'h' + i + ', ';
+
+   if i == to {
+     concat = 'h' + i;
+   }
+
+   result = result + concat;
+ }
+
+ return result;
+}

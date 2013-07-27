@@ -1,0 +1,134 @@
+// Background gradient fallback
+gradient-fallback(gradient, fallback) {
+  background-color: fallback;
+  background-image: gradient;
+}
+
+// Set links color (normal, ?hover, ?active, ?visited, ?focus)
+link-colors(normal, hover = false, active = false, visited = false, focus = false) {
+  color: normal;
+  if visited {
+    &:visited {
+      color: visited;
+    }
+  }
+  if focus {
+    &:focus {
+      color: focus;
+    }
+  }
+  if hover {
+    &:hover {
+      color: hover;
+    }
+  }
+  if active {
+    &:active {
+      color: active;
+    }
+  }
+}
+
+font-face(font-family, file-path, weight = normal, style = normal) {
+  @font-face {
+    font-family: font-family;
+    font-weight: weight;
+    font-style: style;
+    src: url(file-path + '.eot');
+    src: url(file-path + '.eot?#iefix') format('embedded-opentype'), url(file-path + '.woff')  format('woff'), url(file-path + '.ttf') format('truetype'), url(file-path + '.svg#' + font-family) format('svg');
+  }
+}
+
+// Set color for placeholder
+placeholder-color(color) {
+  &::-webkit-input-placeholder {
+    color: color;
+  }
+  &:-moz-placeholder { // Firefox 18-
+    color: color;
+  }
+  &::-moz-placeholder { // Firefox 19+
+    opacity: 1; // fix the opacity (0.54 by default)
+    color: color;
+  }
+  &:-ms-input-placeholder {
+    color: color;
+  }
+}
+
+// Image replacement
+hide-text() {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+/**
+ * Arrow-box: a box with an arrow mixin (with optional borders)
+ * @param size: px, em
+ * @param direction: top, bottom, left, right
+ * @param bg-color: hex, rgb
+ * @param border-width: px, em
+ * @param border-color: hex, rgb
+ * @param position: px, em, %
+ */
+
+arrow-box(size = 20px, direction = top, bg-color = white, border-width = false, border-color = black, position = 50%) {
+
+ // Set reverse direction for use in borders and positions properties
+ reversed-direction = bottom;
+
+ // Set direction of alignment: `left` for vertical direction of arrow (to top, to bottom)
+ // and `top` for horizontal direction of arrow (to left, to right)
+ alignment = left;
+
+ if direction == bottom {
+   reversed-direction = top;
+ } else if direction == left {
+   reversed-direction = right;
+   alignment = top;
+ } else if direction == right {
+   reversed-direction = left;
+   alignment = top;
+ }
+
+ position: relative;
+ background-color: bg-color;
+
+ common-arrow-style() {
+   position: absolute;
+   {reversed-direction}: 100%;
+   {alignment}: position;
+   height: 0;
+   width: 0;
+   content: ' ';
+   pointer-events: none;
+   border-style: solid;
+   border-color: transparent;
+ }
+
+ &:after {
+   common-arrow-style();
+   margin-{alignment}: -(size);
+   border-{reversed-direction}-color: bg-color;
+   border-width: size
+ }
+
+ // with a border
+ if border-width {
+   border: border-width solid border-color;
+
+   if unit(border-width) == px and border-width > 1 {
+     border-width = border-width + 1;
+   } else if unit(border-width) == em and border-width > .1 {
+     border-width = border-width * 1.5;
+   }
+
+   &:before {
+     common-arrow-style();
+     margin-{alignment}: -(size) - border-width;
+     border-{reversed-direction}-color: border-color;
+     border-width: size + border-width;
+   }
+ }
+}

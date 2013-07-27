@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+// @import "lib/vendor/media-queries";
+
+@import "vars";
+
+@import "lib/functions";
+@import "lib/mixins";
+@import "lib/placeholders";
+
+
+// *** Layers *** //
+
+// Base layer
+@import "lib/base/reset";
+@import "lib/base/normalize";
+@import "partials/base";
+@import "partials/print";
+
+// Layout layer
+@import "partials/layout";
+
+/*!
+ * Abstractions
+ */
+@import "lib/objects/media";
+@import "lib/objects/flag";
+
+// Blocks layer
+@import "partials/blocks";
+
+// State layer
+@import "partials/state";
+
+
+// *** Miscellaneous *** //
+
+@import "partials/shame";
