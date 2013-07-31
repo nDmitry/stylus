@@ -4,14 +4,14 @@
 .test2 {
   color: #111;
 }
+.test2:hover {
+  color: #222;
+}
 .test2:visited {
   color: #444;
 }
 .test2:focus {
   color: #555;
-}
-.test2:hover {
-  color: #222;
 }
 .test2:active {
   color: #333;

@@ -7,6 +7,12 @@ gradient-fallback(gradient, fallback) {
 // Set links color (normal, ?hover, ?active, ?visited, ?focus)
 link-colors(normal, hover = false, active = false, visited = false, focus = false) {
   color: normal;
+
+  if hover {
+    &:hover {
+      color: hover;
+    }
+  }
   if visited {
     &:visited {
       color: visited;
@@ -15,11 +21,6 @@ link-colors(normal, hover = false, active = false, visited = false, focus = fals
   if focus {
     &:focus {
       color: focus;
-    }
-  }
-  if hover {
-    &:hover {
-      color: hover;
     }
   }
   if active {
