@@ -73,60 +73,46 @@ hide-text() {
 
 arrow-box(size = 20px, direction = top, bg-color = white, border-width = false, border-color = black, position = 50%) {
 
- // Set reverse direction for use in borders and positions properties
- reversed-direction = bottom;
+  alignment = left if direction in (top bottom);
+  alignment = top if direction in (left right);
 
- // Set direction of alignment: `left` for vertical direction of arrow (to top, to bottom)
- // and `top` for horizontal direction of arrow (to left, to right)
- alignment = left;
+  position: relative;
+  background-color: bg-color;
 
- if direction == bottom {
-   reversed-direction = top;
- } else if direction == left {
-   reversed-direction = right;
-   alignment = top;
- } else if direction == right {
-   reversed-direction = left;
-   alignment = top;
- }
+  common-arrow-style() {
+    position: absolute;
+    {opposite-position(direction)}: 100%;
+    {alignment}: position;
+    height: 0;
+    width: 0;
+    content: ' ';
+    pointer-events: none;
+    border-style: solid;
+    border-color: transparent;
+  }
 
- position: relative;
- background-color: bg-color;
+  &:after {
+    common-arrow-style();
+    margin-{alignment}: -(size);
+    border-{opposite-position(direction)}-color: bg-color;
+    border-width: size
+  }
 
- common-arrow-style() {
-   position: absolute;
-   {reversed-direction}: 100%;
-   {alignment}: position;
-   height: 0;
-   width: 0;
-   content: ' ';
-   pointer-events: none;
-   border-style: solid;
-   border-color: transparent;
- }
+  // with a border
+  if border-width {
+    border: border-width solid border-color;
 
- &:after {
-   common-arrow-style();
-   margin-{alignment}: -(size);
-   border-{reversed-direction}-color: bg-color;
-   border-width: size
- }
+    if unit(border-width) == px and border-width > 1 {
+      border-width = border-width + 1;
+    } else if unit(border-width) == em and border-width > .1 {
+      border-width = border-width * 1.5;
+    }
 
- // with a border
- if border-width {
-   border: border-width solid border-color;
-
-   if unit(border-width) == px and border-width > 1 {
-     border-width = border-width + 1;
-   } else if unit(border-width) == em and border-width > .1 {
-     border-width = border-width * 1.5;
-   }
-
-   &:before {
-     common-arrow-style();
-     margin-{alignment}: -(size) - border-width;
-     border-{reversed-direction}-color: border-color;
-     border-width: size + border-width;
-   }
- }
+    &:before {
+      common-arrow-style();
+      margin-{alignment}: -(size) - border-width;
+      border-{opposite-position(direction)}-color: border-color;
+      border-width: size + border-width;
+    }
+  }
 }
