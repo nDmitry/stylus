@@ -1,0 +1,19 @@
+{
+    "name": "stylus",
+    "description": "Just a small noname Stylus scaffolding",
+    "version": "0.1.0",
+    "private": true,
+    "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
+    "keywords": ["css", "stylus", "scaffolding"],
+    "repository": "git://github.com/nDmitry/stylus",
+    "engines": {
+        "node": "*"
+    },
+    "scripts": {
+        "test": "make test"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "stylus": "*"
+    }
+}

@@ -1,0 +1,8 @@
+.test:before,
+.test:after {
+  content: ' ';
+  display: table;
+}
+.test:after {
+  clear: both;
+}

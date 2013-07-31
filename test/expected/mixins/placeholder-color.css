@@ -1,0 +1,13 @@
+.test::-webkit-input-placeholder {
+  color: #eee;
+}
+.test::-moz-input-placeholder {
+  color: #eee;
+}
+.test::-ms-input-placeholder {
+  color: #eee;
+}
+.test::-moz-placeholder {
+  opacity: 1;
+  color: #eee;
+}

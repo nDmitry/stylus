@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Test';
+  font-weight: normal;
+  font-style: normal;
+  src: url("test/font.eot");
+  src: url("test/font.eot?#iefix") format('embedded-opentype'), url("test/font.woff") format('woff'), url("test/font.ttf") format('truetype'), url("test/font.svg#Test") format('svg');
+}
+@font-face {
+  font-family: 'Test2';
+  font-weight: bold;
+  font-style: italic;
+  src: url("test2/font.eot");
+  src: url("test2/font.eot?#iefix") format('embedded-opentype'), url("test2/font.woff") format('woff'), url("test2/font.ttf") format('truetype'), url("test2/font.svg#Test2") format('svg');
+}
