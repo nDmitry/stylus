@@ -25,7 +25,7 @@ function run(type, name) {
             if (err) {
                 throw err;
             }
-            assert.equal(expected(type, name), css);
+            assert.equal(css, expected(type, name));
         });
 }
 
