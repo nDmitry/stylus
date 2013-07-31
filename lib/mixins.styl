@@ -42,14 +42,17 @@ font-face(font-family, file-path, weight = normal, style = normal) {
 
 // Set color for placeholder
 placeholder-color(color) {
-  vendors = webkit moz ms;
-  for vendor in vendors {
-    &::-{vendor}-input-placeholder {
+  &::-webkit-input-placeholder {
       color: color;
     }
+  &:-moz-placeholder { // Firefox 18-
+    color: color;
   }
   &::-moz-placeholder { // Firefox 19+
-    opacity: 1; // also fix the opacity (0.54 by default)
+    opacity: 1; // fix the opacity (0.54 by default)
+    color: color;
+  }
+  &:-ms-input-placeholder {
     color: color;
   }
 }
