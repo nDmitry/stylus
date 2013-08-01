@@ -40,6 +40,10 @@ describe('Stylus mixins', function() {
         run('mixins', 'arrow-box');
     });
 
+    it('should compile clr mixins', function() {
+        run('mixins', 'clr');
+    });
+
     it('should compile font-face mixin', function() {
         run('mixins', 'font-face');
     });
@@ -59,14 +63,8 @@ describe('Stylus mixins', function() {
     it('should compile placeholder-color mixin', function() {
         run('mixins', 'placeholder-color');
     });
-});
 
-describe('Stylus placeholders', function() {
-    it('should compile clr placeholder', function() {
-        run('placeholders', 'clr');
-    });
-
-    it('should compile user-content placeholder', function() {
-        run('placeholders', 'user-content');
+    it('should compile user-content mixin', function() {
+        run('mixins', 'user-content');
     });
 });
