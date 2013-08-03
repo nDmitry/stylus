@@ -32,9 +32,9 @@ link-colors(normal, hover = false, active = false, visited = false, focus = fals
 
 font-face(font-family, file-path, weight = normal, style = normal) {
   @font-face {
-    font-family: font-family;
-    font-weight: weight;
-    font-style: style;
+    font-family: '"%s"' % unquote(font-family);
+    font-weight: unquote(weight);
+    font-style: unquote(style);
     src: 'url("%s.eot")' % unquote(file-path);
     src: 'local("%s")' % unquote(font-family),
          'url("%s.eot?#iefix")' % unquote(file-path) format('embedded-opentype'),
