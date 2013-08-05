@@ -1,14 +1,24 @@
-html {
-  background: #fff;
-  font-family: base-font-family;
-  color: base-text-color;
+/*! Sensible defaults, mostly based on h5bp */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: verdana;
+  font-size: 1em:
+  line-height: 1.4;
+  color: #222;
+  background-color: #fff;
 }
 
 button,
 input,
 select,
 textarea {
-  color: base-text-color;
+  color: #222;
 }
 
 hr {
@@ -18,6 +28,26 @@ hr {
   border-top: #ccc;
   margin: 1em 0;
   padding: 0;
+}
+
+/**
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/**
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
 }
 
 a {

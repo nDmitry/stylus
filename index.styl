@@ -1,13 +1,8 @@
 georgia = Georgia, Cambria, "Times New Roman", Times, serif;
 helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif;
 lucida-grande = "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
-monospaced = Consolas, "Bitstream Vera Sans Mono", Courier, monospace;
+monospaced = Consolas, Menlo, "Bitstream Vera Sans Mono", Courier, monospace;
 verdana = Verdana, Geneva, sans-serif;
-
-base-font-size = 14px;
-base-line-height = 18px;
-base-font-family = verdana;
-base-text-color = #222;
 
 @import 'lib/functions';
 @import 'lib/mixins';
@@ -20,8 +15,8 @@ base-text-color = #222;
    Base layer
    ========================================================================== */
 
-@import 'lib/base/reset';
 @import 'lib/base/normalize';
+@import 'lib/base/reset';
 @import 'partials/base';
 @import 'partials/print';
 
