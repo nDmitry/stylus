@@ -60,11 +60,23 @@ placeholder-color(color) {
   }
 }
 
-// Image replacement
-hide-text() {
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
+/**
+ * Image replacement
+ * When replacing an element's content with an image, make sure to also set a specific
+ * background-image: url(pathtoimage.png), width, and height so that your replacement image appears.
+ */
+
+ir() {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; // IE 6/7 fallback
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 150%;
+  }
 }
 
 /**

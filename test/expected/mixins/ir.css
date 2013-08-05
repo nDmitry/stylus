@@ -1,0 +1,12 @@
+.test {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+.test:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 150%;
+}

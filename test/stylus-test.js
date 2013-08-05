@@ -52,8 +52,8 @@ describe('Stylus mixins', function() {
         run('mixins', 'gradient-fallback');
     });
 
-    it('should compile hide-text mixin', function() {
-        run('mixins', 'hide-text');
+    it('should compile IR mixin', function() {
+        run('mixins', 'ir');
     });
 
     it('should compile link-colors mixin', function() {
