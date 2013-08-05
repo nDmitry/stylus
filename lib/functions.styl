@@ -11,25 +11,20 @@
 
 headings(from = false, to = false) {
 
- if from == false {
-   from = 1;
- }
+  from = 1 unless from;
+  to = 6 unless to;
 
- if to == false {
-   to = 6;
- }
+  result = '';
 
- result = '';
+  for i in (from..to) {
+    concat = 'h' + i + ', ';
 
- for i in (from..to) {
-   concat = 'h' + i + ', ';
+    if i == to {
+      concat = 'h' + i;
+    }
 
-   if i == to {
-     concat = 'h' + i;
-   }
+    result = result + concat;
+  }
 
-   result = result + concat;
- }
-
- return result;
+  return result;
 }
