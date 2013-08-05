@@ -7,12 +7,12 @@
 .test2:hover {
   color: #222;
 }
-.test2:visited {
-  color: #444;
-}
 .test2:focus {
-  color: #555;
+  color: #333;
 }
 .test2:active {
-  color: #333;
+  color: #444;
+}
+.test2:visited {
+  color: #555;
 }
