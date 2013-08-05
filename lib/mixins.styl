@@ -52,7 +52,7 @@ placeholder-color(color) {
     color: color;
   }
   &::-moz-placeholder { // Firefox 19+
-    opacity: 1; // fix the opacity (0.54 by default)
+    opacity(1, false); // fix the opacity (0.54 by default)
     color: color;
   }
   &:-ms-input-placeholder {
@@ -181,5 +181,17 @@ user-content() {
       border: 1px solid #ccc;
       padding: 5px;
     }
+  }
+}
+
+/**
+ * The mixin adds `opacity` property for modern browsers
+ * and `filter` for IE 8-
+ */
+
+opacity(n, ie = true) {
+  opacity: n;
+  if ie {
+    filter: 'alpha(opacity=%s)' % (n * 100);
   }
 }

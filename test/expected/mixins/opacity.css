@@ -1,0 +1,4 @@
+.test {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}

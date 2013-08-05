@@ -60,6 +60,10 @@ describe('Stylus mixins', function() {
         run('mixins', 'link-colors');
     });
 
+    it('should compile opacity mixin', function() {
+        run('mixins', 'opacity');
+    });
+
     it('should compile placeholder-color mixin', function() {
         run('mixins', 'placeholder-color');
     });
