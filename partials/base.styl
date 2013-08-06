@@ -50,6 +50,14 @@ textarea {
     resize: vertical;
 }
 
+/**
+ * Russian quotes. http://bit.ly/19KbJcK
+ */
+
+html:lang(ru) q {
+  quotes: "\00AB" "\00BB" "\201E" "\201C";
+}
+
 a {
   link-colors(blue, lighten(blue, 30%));
 }
