@@ -1,7 +1,7 @@
 {
     "name": "stylus",
     "description": "Just a small noname Stylus scaffolding",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "private": true,
     "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
     "keywords": ["css", "stylus", "scaffolding"],
