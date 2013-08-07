@@ -36,8 +36,8 @@ describe('Stylus functions', function() {
 });
 
 describe('Stylus mixins', function() {
-    it('should compile arrow-box mixin', function() {
-        run('mixins', 'arrow-box');
+    it('should compile arrow mixin', function() {
+        run('mixins', 'arrow');
     });
 
     it('should compile clr mixins', function() {

@@ -1,36 +1,25 @@
 .test {
   position: relative;
-  background-color: #fff;
 }
 .test:after {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  height: 0;
-  width: 0;
   content: ' ';
-  pointer-events: none;
-  border-style: solid;
-  border-color: transparent;
+  border: solid transparent;
   margin-left: -20px;
   border-bottom-color: #fff;
   border-width: 20px;
 }
 .test2 {
   position: relative;
-  background-color: #eee;
-  border: 2px solid rgba(170,170,170,0.5);
 }
 .test2:after {
   position: absolute;
   left: 100%;
   top: 60%;
-  height: 0;
-  width: 0;
   content: ' ';
-  pointer-events: none;
-  border-style: solid;
-  border-color: transparent;
+  border: solid transparent;
   margin-top: -30px;
   border-left-color: #eee;
   border-width: 30px;
@@ -39,13 +28,9 @@
   position: absolute;
   left: 100%;
   top: 60%;
-  height: 0;
-  width: 0;
   content: ' ';
-  pointer-events: none;
-  border-style: solid;
-  border-color: transparent;
-  margin-top: -33px;
+  border: solid transparent;
+  margin-top: -32px;
   border-left-color: rgba(170,170,170,0.5);
-  border-width: 33px;
+  border-width: 32px;
 }
