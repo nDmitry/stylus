@@ -43,23 +43,6 @@ font-face(font-family, file-path, weight = normal, style = normal) {
   }
 }
 
-// Set color for placeholder
-placeholder-color(color) {
-  &::-webkit-input-placeholder {
-      color: color;
-    }
-  &:-moz-placeholder { // Firefox 18-
-    color: color;
-  }
-  &::-moz-placeholder { // Firefox 19+
-    opacity(1, false); // fix the opacity (0.54 by default)
-    color: color;
-  }
-  &:-ms-input-placeholder {
-    color: color;
-  }
-}
-
 /**
  * Image replacement
  * When replacing an element's content with an image, make sure to also set a specific
