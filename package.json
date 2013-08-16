@@ -1,7 +1,7 @@
 {
     "name": "styluslib",
     "description": "Just a small noname Stylus scaffolding",
-    "version": "0.2.4",
+    "version": "0.3.0",
     "private": true,
     "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
     "keywords": ["css", "stylus", "scaffolding"],
