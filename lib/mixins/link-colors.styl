@@ -1,0 +1,27 @@
+/**
+ * Set links color (normal, ?hover, ?focus, ?active, ?visited)
+ */
+
+link-colors(normal, hover = false, focus = false, active = false, visited = false) {
+  color: normal;
+  if hover {
+    &:hover {
+      color: hover;
+    }
+  }
+  if focus {
+    &:focus {
+      color: focus;
+    }
+  }
+  if active {
+    &:active {
+      color: active;
+    }
+  }
+  if visited {
+    &:visited {
+      color: visited;
+    }
+  }
+}

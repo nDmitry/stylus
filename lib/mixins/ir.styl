@@ -1,0 +1,20 @@
+/**
+ * Image replacement
+ * When replacing an element's content with an image, make sure to also set a specific
+ * background-image: url(pathtoimage.png), width, and height so that your replacement image appears.
+ */
+
+ir(ie = false) {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  if ie {
+    *text-indent: -9999px; // IE 6/7 fallback
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}

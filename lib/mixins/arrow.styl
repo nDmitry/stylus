@@ -1,0 +1,42 @@
+/**
+ * Arrow: a box with an arrow mixin (with optional borders)
+ * @param size: px, em
+ * @param pos: top, bottom, left, right
+ * @param bg: hex, rgb, hsl Background color
+ * @param b-wh: px, em Border width
+ * @param b-cl: hex, rgb Border color
+ * @param offset: px, em, %
+ */
+
+arrow(size = 20px, pos = top, bg = white, b-wh = false, b-cl = black, offset = 50%) {
+
+  align = left if pos in (top bottom);
+  align = top if pos in (left right);
+
+  position: relative;
+
+  common-arrow-style() {
+    position: absolute;
+    {opposite-position(pos)}: 100%;
+    {align}: offset;
+    content: ' ';
+    border: solid transparent;
+  }
+
+  &:after {
+    common-arrow-style();
+    margin-{align}: -(size);
+    border-{opposite-position(pos)}-color: bg;
+    border-width: size;
+  }
+
+  if b-wh {
+
+    &:before {
+      common-arrow-style();
+      margin-{align}: -(size) - b-wh;
+      border-{opposite-position(pos)}-color: b-cl;
+      border-width: size + b-wh;
+    }
+  }
+}
