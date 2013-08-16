@@ -1,0 +1,8 @@
+.test {
+  font-size: 18px;
+  font-size: 1.125rem;
+  width: 400px;
+  width: 25rem;
+  box-shadow: 0 0 7px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0.438rem rgba(0,0,0,0.1);
+}
