@@ -1,0 +1,38 @@
+/**
+ * Nav object
+ *
+ * E.g.:
+ *
+ *    <ul class="nav [nav--[stacked|fit]]">
+ *        <li><a href="#"></a></li>
+ *        <li><a href="#"></a></li>
+ *    </ul>
+ */
+
+.nav {
+  > li {
+    &, > a {
+      display: inline-block;
+    }
+  }
+}
+
+.nav--stacked {
+  > li {
+    display: list-item;
+    > a {
+      display: block;
+    }
+  }
+}
+
+.nav--fit {
+  display: table;
+  width: 100%;
+  > li {
+    display: table-cell;
+    > a {
+      display: block;
+    }
+  }
+}
