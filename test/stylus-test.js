@@ -64,6 +64,10 @@ describe('Stylus mixins', function() {
         run('mixins', 'opacity');
     });
 
+    it('should compile positions mixin', function() {
+        run('mixins', 'positions');
+    });
+
     it('should compile rem mixin', function() {
         run('mixins', 'rem');
     });

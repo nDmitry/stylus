@@ -1,0 +1,15 @@
+.fixed {
+  position: fixed;
+  top: 5px;
+  left: 0;
+}
+.absolute {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+.relative {
+  position: relative;
+  top: 5px;
+  left: 0;
+}
