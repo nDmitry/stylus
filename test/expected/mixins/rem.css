@@ -6,3 +6,8 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.1);
   box-shadow: 0 0 0.438rem rgba(0,0,0,0.1);
 }
+.test-without-fallback {
+  font-size: 1.125rem;
+  width: 25rem;
+  box-shadow: 0 0 0.438rem rgba(0,0,0,0.1);
+}
