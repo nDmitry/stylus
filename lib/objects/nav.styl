@@ -4,13 +4,13 @@
  * E.g.:
  *
  *    <ul class="nav [nav--[stacked|fit]]">
- *        <li><a href="#"></a></li>
- *        <li><a href="#"></a></li>
+ *        <li class="nav__item"><a href="#"></a></li>
+ *        <li  class="nav__item"><a href="#"></a></li>
  *    </ul>
  */
 
 .nav {
-  > li {
+  &__item {
     &, > a {
       display: inline-block;
     }
@@ -18,7 +18,7 @@
 }
 
 .nav--stacked {
-  > li {
+  &__item {
     display: list-item;
     > a {
       display: block;
@@ -29,7 +29,7 @@
 .nav--fit {
   display: table;
   width: 100%;
-  > li {
+  &__item {
     display: table-cell;
     > a {
       display: block;
