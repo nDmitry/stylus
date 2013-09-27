@@ -44,6 +44,10 @@ describe('Stylus mixins', function() {
         run('mixins', 'clr');
     });
 
+    it('should compile fallback mixin', function() {
+        run('mixins', 'fallback');
+    });
+
     it('should compile font-face mixin', function() {
         run('mixins', 'font-face');
     });

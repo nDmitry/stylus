@@ -1,0 +1,19 @@
+/**
+ * Common fallback mixin
+ *
+ * Example:
+ *
+ * p {
+ *   fallback(color, rgba(255, 255, 255, .75), #fff);
+ * }
+ * Output:
+ * p {
+ *   color: #fff;
+ *   color: rgba(255, 255, 255, 0.75);
+ * }
+ */
+
+fallback(prop, val, fall) {
+  {prop}: fall;
+  {prop}: val;
+}
