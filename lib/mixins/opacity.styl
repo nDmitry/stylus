@@ -3,9 +3,7 @@
  * and `filter` for IE 8-
  */
 
-opacity(n, ie = true) {
+opacity(n) {
   opacity: n;
-  if ie {
-    filter: 'alpha(opacity=%s)' % (n * 100);
-  }
+  filter: 'alpha(opacity=%s)' % (n * 100);
 }

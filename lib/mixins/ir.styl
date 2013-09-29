@@ -4,12 +4,12 @@
  * background-image: url(pathtoimage.png), width, and height so that your replacement image appears.
  */
 
-ir(ie = false) {
+ir() {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  if ie {
-    *text-indent: -9999px; // IE 6/7 fallback
+  if ie7 {
+    *text-indent: -9999px;
   }
   &:before {
     content: '';
