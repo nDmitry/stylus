@@ -20,6 +20,7 @@ function expected(type, name) {
 
 function run(type, name) {
     stylus(fixture(type, name))
+        .import('vars')
         .import(path.join('lib', type))
         .render(function(err, css) {
             if (err) {
