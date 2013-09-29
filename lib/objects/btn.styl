@@ -1,0 +1,39 @@
+/**
+ * Button object
+ *
+ * E.g.:
+ *
+ *    <button class="btn btn--full">Button</button>
+ */
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn--fit {
+  width: 100%;
+  text-align: center;
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+}
+
+if ie7 {
+  .is-ie7 .btn {
+    display: inline;
+    zoom: 1;
+  }
+}
