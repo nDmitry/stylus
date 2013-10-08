@@ -1,4 +1,5 @@
 ie7 ?= false;
+responsive ?= true;
 
 var-georgia = Georgia, Cambria, "Times New Roman", Times, serif;
 var-helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11,5 +12,8 @@ base-font-size = 0.875em; // 14px
 base-line-height = 1.4;
 base-color = #222;
 
+breakpoint-palm = 'only screen and (max-width: 568px)';
+breakpoint-lap = 'only screen and (min-width: 569px) and (max-width: 1023px)';
+breakpoint-portable = 'only screen and (max-width: 1023px)';
+
 grid-gutter-width = 20px;
-grid-mobile-breakpoint = 568px;
