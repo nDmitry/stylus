@@ -3,8 +3,38 @@
  */
 
 .is-hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
+}
+
+if responsive {
+  @media breakpoint-palm {
+    .is-hidden--palm {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+
+  @media breakpoint-lap {
+    .is-hidden--lap {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+
+  @media breakpoint-portable {
+    .is-hidden--portable {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+
+  @media breakpoint-desk {
+    .is-hidden--desk {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
 }
 
 /**
@@ -12,7 +42,7 @@
  */
 
 .is-invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /**
@@ -20,12 +50,12 @@
  */
 
 .is-visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
