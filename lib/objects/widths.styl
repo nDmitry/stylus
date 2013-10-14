@@ -21,28 +21,17 @@ for key in widths {
 }
 
 if responsive {
-  @media breakpoint-palm {
-    for key in widths {
-      .palm--{key[0]} {
-        width: key[1];
-      }
-    }
-  }
+  breakpoints = (palm lap portable);
 
-  @media breakpoint-lap {
-    for key in widths {
-      .lap--{key[0]} {
-        width: key[1];
-      }
-    }
-  }
+  for name in breakpoints {
+    breakpoint = 'breakpoint-' + name;
 
-  @media breakpoint-portable {
-    for key in widths {
-      .portable--{key[0]} {
-        width: key[1];
+    @media breakpoint {
+      for key in widths {
+        .{name}--{key[0]} {
+          width: key[1];
+        }
       }
     }
   }
 }
-

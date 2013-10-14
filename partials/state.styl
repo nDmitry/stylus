@@ -8,31 +8,16 @@
 }
 
 if responsive {
-  @media breakpoint-palm {
-    .is-hidden--palm {
-      display: none !important;
-      visibility: hidden;
-    }
-  }
+  breakpoints = (palm lap portable desk);
 
-  @media breakpoint-lap {
-    .is-hidden--lap {
-      display: none !important;
-      visibility: hidden;
-    }
-  }
+  for name in breakpoints {
+    breakpoint = 'breakpoint-' + name;
 
-  @media breakpoint-portable {
-    .is-hidden--portable {
-      display: none !important;
-      visibility: hidden;
-    }
-  }
-
-  @media breakpoint-desk {
-    .is-hidden--desk {
-      display: none !important;
-      visibility: hidden;
+    @media breakpoint {
+      .is-hidden--{name} {
+        display: none !important;
+        visibility: hidden;
+      }
     }
   }
 }
