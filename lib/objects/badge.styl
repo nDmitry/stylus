@@ -1,0 +1,20 @@
+/**
+ * Badge object
+ *
+ * E.g.:
+ *
+ *    <span class="badge">2</span>
+ */
+
+.badge {
+  display: inline-block;
+  padding: .1em .2em;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  &:empty {
+    display: none;
+  }
+}
