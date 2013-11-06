@@ -8,13 +8,15 @@ ir() {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  if ie7 {
-    *text-indent: -9999px;
-  }
   &:before {
     content: '';
     display: block;
     width: 0;
     height: 150%;
+  }
+  if ie7 {
+    .is-ie7 & {
+      text-indent: -9999px;
+    }
   }
 }

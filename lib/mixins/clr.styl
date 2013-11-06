@@ -20,6 +20,8 @@ clr() {
     clear: both;
   }
   if ie7 {
-    *zoom: 1;
+    .is-ie7 & {
+      zoom: 1;
+    }
   }
 }

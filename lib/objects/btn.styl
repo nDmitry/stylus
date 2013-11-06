@@ -16,11 +16,14 @@
   font-size: 100%;
   cursor: pointer;
   border: none;
-}
-
-.btn {
   &, &:hover {
     text-decoration: none;
+  }
+  if ie7 {
+    .is-ie7 & {
+      display: inline;
+      zoom: 1;
+    }
   }
 }
 
@@ -31,11 +34,4 @@
 
 .btn--disabled {
   cursor: not-allowed;
-}
-
-if ie7 {
-  .is-ie7 .btn {
-    display: inline;
-    zoom: 1;
-  }
 }
