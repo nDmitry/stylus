@@ -1,0 +1,13 @@
+/**
+ * For grunt-spritesmith Stylus output
+ * Adds rules for both @1x and @2x
+ */
+
+sprite-2x($sprite, $sprite_2x) {
+  sprite($sprite);
+
+  @media hidpi {
+    spriteImage($sprite_2x);
+    background-size: $sprite[6] $sprite[7];
+  }
+}
