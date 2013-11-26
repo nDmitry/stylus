@@ -18,6 +18,11 @@ for key in widths {
   .{key[0]} {
     width: key[1];
   }
+
+  // offsets
+  .offset-{key[0]} {
+    margin-left: key[1];
+  }
 }
 
 if responsive {
@@ -29,6 +34,11 @@ if responsive {
     @media breakpoint {
       for key in widths {
         .{name}--{key[0]} {
+          width: key[1];
+        }
+
+        // offsets
+        .offset-{name}--{key[0]} {
           width: key[1];
         }
       }
