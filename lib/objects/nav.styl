@@ -3,13 +3,14 @@
  *
  * E.g.:
  *
- *    <ul class="nav [nav--[stacked|fit]]">
- *        <li class="nav__item"><a href="#"></a></li>
- *        <li  class="nav__item"><a href="#"></a></li>
+ *    <ul class="nav [nav[--[stacked|fit]]">
+ *        <li class="nav__item"><a href=""></a></li>
+ *        <li  class="nav__item"><a href=""></a></li>
  *    </ul>
  */
 
 .nav {
+  white-space: nowrap;
   &__item {
     &, > a {
       display: inline-block;
