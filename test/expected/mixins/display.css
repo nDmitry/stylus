@@ -1,0 +1,10 @@
+.test {
+  display: inline-block;
+}
+.test {
+  display: inline-block;
+}
+.is-ie7 .test {
+  display: inline;
+  zoom: 1;
+}

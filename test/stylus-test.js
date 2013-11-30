@@ -41,8 +41,12 @@ describe('Stylus mixins', function() {
         run('mixins', 'arrow');
     });
 
-    it('should compile clr mixins', function() {
+    it('should compile clr mixin', function() {
         run('mixins', 'clr');
+    });
+
+    it('should compile display mixin', function() {
+        run('mixins', 'display');
     });
 
     it('should compile fallback mixin', function() {

@@ -1,0 +1,28 @@
+/**
+ * Automatic hasLayout hack for IE7
+ *
+ * Output (if ie7 == true):
+ *
+ * a {
+ *   display: inline-block;
+ * }
+ * .is-ie7 a {
+ *   display: inline;
+ *   zoom: 1;
+ * }
+ */
+
+display(val) {
+  if val == 'inline-block' {
+    display: val;
+
+    if ie7 {
+      .is-ie7 & {
+        display: inline;
+        zoom: 1;
+      }
+    }
+  } else {
+    display: val;
+  }
+}
