@@ -1,0 +1,25 @@
+/**
+ * The block mixin for media queries
+ *
+ * Example:
+ * +mq('palm') {
+ *   // see the keywords hash in vars.styl
+ * }
+ * +mq('min-width: 1600px') {
+ *   // using a custom breakpoint
+ * }
+ */
+
+mq(breakpoint) {
+
+  // use predefined breakpoint by keyword or take a custom one
+  query = unquote(mq-breakpoints[breakpoint] || breakpoint);
+
+  // a user doesn't have to worry about parens in custom breakpoints
+  query = '(%s)' % query unless match('\(', query);
+  query = 'only screen and %s' % query;
+
+  @media query {
+    {block};
+  }
+}
