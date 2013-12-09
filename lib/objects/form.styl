@@ -1,0 +1,123 @@
+/**
+ * Forms
+ *
+ * Example:
+ *
+ * <form class="form[--vertical|inline]">
+ *   <div class="form__group">
+ *     <label class="form__label" for="email">
+ *       E-mail:
+ *       <small>Additional information</small>
+ *     </label>
+ *     <div class="form__control">
+ *       <input class="text-input" type="email" id="email">
+ *       <small>Some text after the field</small>
+ *     </div>
+ *   </div>
+ *   <div class="form__group">
+ *     <div class="form__label">
+ *       Options:
+ *     </div>
+ *     <div class="form__control">
+ *       <ul class="check-list[--vertical]">
+ *            <li>
+ *              <label>
+ *                <input type="checkbox"> Option
+ *              </label>
+ *            </li>
+ *            <li>
+ *                <label>
+ *                  <input type="checkbox"> Option
+ *                </label>
+ *            </li>
+ *        </ul>
+ *     </div>
+ *   </div>
+ * </form>
+ */
+
+.form {
+  &__group {
+    margin-bottom: grid-gutter-width;
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+    if ie7 {
+      .is-ie7 & {
+        letter-spacing: normal;
+        word-spacing: -0.43em;
+      }
+    }
+  }
+
+  &__label, &__control {
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+
+  &__label {
+    padding-right: (grid-gutter-width / 2);
+    small {
+      display: block;
+    }
+  }
+
+  &__control {
+    padding-left: (grid-gutter-width / 2);
+    small {
+      display: inline-block;
+    }
+  }
+}
+
+.form--vertical {
+  .form {
+    &__label, &__control {
+      display: block;
+    }
+    &__label {
+      padding-right: 0;
+      padding-bottom: (grid-gutter-width / 2);
+    }
+    &__control {
+      padding-left: 0;
+    }
+  }
+}
+
+.form--inline {
+  .form {
+    &__label, &__control {
+      display: inline;
+    }
+    &__label {
+      small {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+.text-input, textarea {
+
+}
+
+.check-list {
+  li {
+    display: inline-block;
+    padding-right: grid-gutter-width;
+  }
+}
+
+.check-list--vertical {
+  li {
+    display: block;
+    padding-right: 0;
+    padding-bottom: (grid-gutter-width / 2);
+  }
+}
