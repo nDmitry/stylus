@@ -1,19 +1,23 @@
 {
-    "name": "styluslib",
-    "description": "Noname Stylus framework",
-    "version": "0.10.0",
-    "private": true,
-    "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
-    "keywords": ["css", "stylus", "scaffolding"],
-    "repository": "git://github.com/nDmitry/stylus",
-    "engines": {
-        "node": "*"
-    },
-    "scripts": {
-        "test": "make test"
-    },
-    "devDependencies": {
-        "mocha": "*",
-        "stylus": "*"
-    }
+  "name": "styluslib",
+  "description": "Noname Stylus framework",
+  "version": "0.11.0",
+  "private": true,
+  "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
+  "keywords": [
+    "css",
+    "stylus",
+    "scaffolding"
+  ],
+  "repository": "git://github.com/nDmitry/stylus",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "stylus": "*"
+  }
 }
