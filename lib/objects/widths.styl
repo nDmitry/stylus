@@ -26,19 +26,17 @@ for key in widths {
 }
 
 if responsive {
-  breakpoints = (palm lap portable);
+  breakpoints = ('palm' 'lap' 'portable' 'desk' 'wide');
 
-  for name in breakpoints {
-    breakpoint = 'breakpoint-' + name;
-
-    @media breakpoint {
+  for breakpoint in breakpoints {
+    +mq(breakpoint) {
       for key in widths {
-        .{name}--{key[0]} {
+        .{breakpoint}--{key[0]} {
           width: key[1];
         }
 
         // offsets
-        .offset-{name}--{key[0]} {
+        .{breakpoint}--offset-{key[0]} {
           width: key[1];
         }
       }

@@ -8,13 +8,11 @@
 }
 
 if responsive {
-  breakpoints = (palm lap portable desk);
+  breakpoints = ('palm' 'lap' 'portable' 'desk' 'wide');
 
-  for name in breakpoints {
-    breakpoint = 'breakpoint-' + name;
-
-    @media breakpoint {
-      .is-hidden--{name} {
+  for breakpoint in breakpoints {
+    +mq(breakpoint) {
+      .is-hidden--{breakpoint} {
         display: none !important;
         visibility: hidden;
       }
