@@ -1,7 +1,9 @@
 /*! Custom reset */
 
-p,
-ol, ul,
+{headings()},
+p, blockquote, figure,
+pre, hr,
+ul, ol, dl, dd,
 fieldset,
 table, th, td {
   margin: 0;
@@ -9,10 +11,19 @@ table, th, td {
   border: 0;
 }
 
+{headings()},
+p, blockquote, figure,
+pre, hr,
+ul, ol, dl,
+fieldset,
+table {
+  margin-bottom: rem(default-font-size * base-line-height, root: default-font-size * base-font-size);
+}
+
 ol, ul {
   list-style: none;
 }
 
-dl, dd {
-  margin: 0;
+table {
+  width: 100%;
 }

@@ -18,7 +18,7 @@
  * }
  */
 
-rem(n, fallback = true, root = 16px) {
+rem(n, fallback = true, root = default-font-size) {
   unless current-property {
     error('rem() must be used within a property');
   }
