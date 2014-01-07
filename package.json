@@ -14,7 +14,7 @@
     "node": "*"
   },
   "scripts": {
-    "test": "make test"
+    "test": "mocha --reporter spec ./test"
   },
   "devDependencies": {
     "mocha": "*",
