@@ -80,4 +80,8 @@ describe('Stylus mixins', function() {
     it('should compile rem mixin', function() {
         run('mixins', 'rem');
     });
+
+    it('should compile underline mixin', function() {
+        run('mixins', 'underline');
+    });
 });

@@ -1,0 +1,17 @@
+/**
+ * Allows to make underlines with a thickness regardless of
+ * a font size, custom vertical position and color
+ */
+
+underline(color, pos = 100%, h = 1px) {
+  text-decoration: none;
+
+  if color == false {
+    background: none;
+  } else {
+    background: linear-gradient(to left, color, color) 0 pos / 1px h repeat-x;
+    .oldie &, .is-ie9 & {
+      text-decoration: underline;
+    }
+  }
+}
