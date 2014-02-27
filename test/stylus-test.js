@@ -61,10 +61,6 @@ describe('Stylus mixins', function() {
         run('mixins', 'ir');
     });
 
-    it('should compile link-colors mixin', function() {
-        run('mixins', 'link-colors');
-    });
-
     it('should compile mq mixin', function() {
         run('mixins', 'mq');
     });
