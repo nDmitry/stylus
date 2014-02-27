@@ -8,21 +8,15 @@
  * {headings(2,5)} {}
  * -> h2, h3, h4, h5 {}
  */
-headings(from = false, to = false) {
-
-  from = 1 unless from;
-  to = 6 unless to;
-
+headings(from = 1, to = 6) {
   result = '';
 
   for i in (from..to) {
-    concat = 'h' + i + ', ';
+    result = result + 'h' + i;
 
-    if i == to {
-      concat = 'h' + i;
+    unless i == to {
+      result = result + ', ';
     }
-
-    result = result + concat;
   }
 
   return result;
