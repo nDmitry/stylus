@@ -1,4 +1,6 @@
 @import 'vars';
+@import 'lib/functions/*';
+@import 'lib/mixins/*';
 @import 'hooks';
 
 /*!==========================================================================
@@ -9,7 +11,8 @@
    Base layer
    ========================================================================== */
 
-@import 'lib';
+@import 'lib/base/normalize';
+@import 'lib/base/reset';
 @import 'partials/base';
 @import 'partials/print';
 
@@ -23,7 +26,7 @@
    Objects layer
    ========================================================================== */
 
-@import 'lib/objects';
+@import 'lib/objects/*';
 
 /*!
    Blocks layer
