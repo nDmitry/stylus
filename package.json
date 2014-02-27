@@ -1,7 +1,7 @@
 {
   "name": "styluslib",
   "description": "Noname Stylus framework",
-  "version": "0.14.2",
+  "version": "0.15.0",
   "private": true,
   "author": "Dmitry Nikitenko <dima.nikitenko@gmail.com>",
   "keywords": [
