@@ -17,14 +17,13 @@
  *   box-shadow: 0 0 0.438rem #000;
  * }
  */
-
 rem(n, fallback = true, root = default-font-size) {
   unless current-property {
     error('rem() must be used within a property');
   }
 
   unless unit(n) is 'px' and unit(root) is 'px' {
-    error('Please use px as unit');
+    error('Please use px as a unit');
   }
 
   replace(expr, str, val) {
@@ -43,5 +42,5 @@ rem(n, fallback = true, root = default-font-size) {
     add-property(current-property[0], replace(current-property[1], '__CALL__', n));
   }
 
-  unit(round((n / root), 3), s('rem'));
+  unit(round((n / root), 4), s('rem'));
 }

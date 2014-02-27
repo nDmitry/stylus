@@ -1,8 +1,6 @@
 /**
- * The mixin adds `opacity` property for modern browsers
- * and `filter` for IE 8-
+ * Adds the `opacity` property and a fallback for IE 8-
  */
-
 opacity(n) {
   opacity: n;
   filter: 'alpha(opacity=%s)' % (n * 100);

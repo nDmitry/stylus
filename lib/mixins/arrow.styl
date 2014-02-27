@@ -1,5 +1,6 @@
 /**
- * Arrow: a box with an arrow mixin (with optional borders)
+ * Generates an arrow with optional borders
+ *
  * @param size: px, em
  * @param pos: top, bottom, left, right
  * @param bg: hex, rgb, hsl Background color
@@ -7,9 +8,7 @@
  * @param b-cl: hex, rgb Border color
  * @param offset: px, em, %
  */
-
 arrow(size = 20px, pos = top, bg = white, b-wh = false, b-cl = black, offset = 50%) {
-
   align = left if pos in (top bottom);
   align = top if pos in (left right);
 
@@ -31,7 +30,6 @@ arrow(size = 20px, pos = top, bg = white, b-wh = false, b-cl = black, offset = 5
   }
 
   if b-wh {
-
     &:before {
       common-arrow-style();
       margin-{align}: -(size) - b-wh;
